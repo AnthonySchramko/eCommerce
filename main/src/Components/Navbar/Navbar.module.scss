@@ -1,0 +1,19 @@
+Nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  height: 10px;
+  border: 1px solid red;
+  margin: 1vw;
+}
+.text {
+  text-decoration: none;
+  font-size: 20px;
+  &:hover {
+    color: red;
+  }
+}
