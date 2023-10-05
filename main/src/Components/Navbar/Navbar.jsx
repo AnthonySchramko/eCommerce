@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div>
       <nav>
-        <NavLink to="/home">
+        <NavLink to="/cards">
           <p className={styles.text}>Magic: The Gathering Cards | </p>
         </NavLink>
         <NavLink to="/cart">

@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../../Components/Card/Card";
 import { useParams } from "react-router-dom";
+
 const CardContainer = ({ cards }) => {
   const { id } = useParams();
 
@@ -16,6 +17,8 @@ const CardContainer = ({ cards }) => {
               price={card.price}
               rarity={card.rarity}
               colours={card.colours}
+              id={card.id}
+              desc={card.desc}
             />
           );
         })}

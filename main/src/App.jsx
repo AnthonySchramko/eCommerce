@@ -5,6 +5,7 @@ import Landing from "./Containers/Landing/Landing";
 import Products from "./Containers/Products/Products";
 import Cart from "./Containers/Cart/Cart.jsx";
 import ProductWrapper from "./Components/ProductWrapper/ProductWrapper";
+import IndividualCard from "./Components/IndividualCard/IndividualCard";
 
 function App() {
   return (
@@ -13,15 +14,15 @@ function App() {
         <Navbar />
         <Routes>
           <Route
-            path="/home"
+            path="/cards"
             element={
               <>
                 <Landing />
-                {/* <Products /> */}
                 <ProductWrapper />
               </>
             }
           />
+          <Route path="/cards/:id" element={<IndividualCard />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </div>
