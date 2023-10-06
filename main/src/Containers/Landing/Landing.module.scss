@@ -1,7 +1,15 @@
 .wrapper {
   height: 50vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
   margin-top: 20px;
   width: 100%;
+}
+.gallery {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
 }

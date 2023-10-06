@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getAllCards } from "../../Services/cards.js";
+import styles from "./SearchBar.module.scss";
 const SearchBar = ({ handleSubmit }) => {
   const [input, setInput] = useState("");
   const [rarity, setRarity] = useState("");
@@ -11,7 +11,7 @@ const SearchBar = ({ handleSubmit }) => {
     setInput("");
   };
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} className={styles.searchContainer}>
       <input
         type="text"
         placeholder="Search for a card"

@@ -1,12 +1,12 @@
 import React from "react";
 import Card from "../../Components/Card/Card";
 import { useParams } from "react-router-dom";
-
+import styles from "./CardContainer.module.scss";
 const CardContainer = ({ cards }) => {
   const { id } = useParams();
 
   return (
-    <div>
+    <div className={styles.container}>
       {cards &&
         cards.map((card) => {
           return (

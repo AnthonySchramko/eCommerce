@@ -46,12 +46,12 @@ const IndividualCard = () => {
           <p>Price: ${card.price}</p>
           <form onSubmit={handleSubmit}>
             <label htmlFor="version">Print version</label>
-            <select name="version" id="version" onChange={handleChange}>
+            {/* <select name="version" id="version" onChange={handleChange}>
               {card &&
                 card.map((card) => {
                   <option value={version}>{version}</option>;
                 })}
-            </select>
+            </select> */}
             <button type="submit">Add to cart</button>
           </form>
         </div>

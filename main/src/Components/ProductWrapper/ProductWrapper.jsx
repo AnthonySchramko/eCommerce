@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
-import ProductLoader from "../../Containers/ProductLoader/ProductLoader";
-import CardContainer from "../../Containers/CardContainer/CardContainer";
 import Products from "../../Containers/Products/Products";
-
+import styles from "./ProductWrapper.module.scss";
 const ProductWrapper = () => {
   const [searchData, setSearchData] = useState(null);
 
@@ -11,7 +9,7 @@ const ProductWrapper = () => {
     setSearchData(data);
   };
   return (
-    <div>
+    <div className={styles.wrapper}>
       <SearchBar handleSubmit={onSearchSubmit} />
       <Products />
     </div>
