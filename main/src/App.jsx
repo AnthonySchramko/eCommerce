@@ -4,10 +4,10 @@ import Navbar from "./Components/Navbar/Navbar";
 import Landing from "./Containers/Landing/Landing";
 import Cart from "./Containers/Cart/Cart.jsx";
 import IndividualCard from "./Components/IndividualCard/IndividualCard";
-import { addToCards, generateCard } from "./Services/import.js";
+// import { addToCards, generateCard } from "./Services/import.js";
 
 function App() {
-  console.log(generateCard());
+  // console.log(generateCard());
   return (
     <BrowserRouter>
       <div>

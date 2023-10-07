@@ -1,14 +1,16 @@
 import { useState } from "react";
 import styles from "./SearchBar.module.scss";
-const SearchBar = ({ handleSubmit }) => {
+const SearchBar = ({ handleSubmit, setSearchState }) => {
   const [input, setInput] = useState("");
-  const [rarity, setRarity] = useState("");
-  const [colours, setColours] = useState("");
+  // const [rarity, setRarity] = useState("");
+  // const [colours, setColours] = useState("");
   const onSubmit = (e) => {
     e.preventDefault();
-    const data = { input, rarity, colours };
+    const data = input;
     handleSubmit(data);
+    setSearchState(true);
     setInput("");
+    console.log(input);
   };
   return (
     <form onSubmit={onSubmit} className={styles.searchContainer}>
@@ -18,7 +20,7 @@ const SearchBar = ({ handleSubmit }) => {
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
-      <label htmlFor="rarity">Rarity: </label>
+      {/* <label htmlFor="rarity">Rarity: </label>
       <select
         name="rarity"
         id="rarity"
@@ -44,7 +46,8 @@ const SearchBar = ({ handleSubmit }) => {
         <label htmlFor="black">Black</label>
         <input type="checkbox" id="colourless" name="colourless" />
         <label htmlFor="red">Red</label>
-      </div>
+      </div> */}
+      <button type="submit">Search</button>
     </form>
   );
 };

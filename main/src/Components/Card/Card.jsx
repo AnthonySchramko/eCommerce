@@ -5,12 +5,9 @@ const Card = ({ id, name, img, price, desc }) => {
   return (
     <NavLink to={`/cards/${id}`}>
       <div className={styles.cardWrapper}>
+        <h4>{name}</h4>
         <img className={styles.imageWrapper} src={img} />
-        <div className={styles.textWrapper}>
-          <h2>{name}</h2>
-          <p>{desc}</p>
-          <h4>$ {price} </h4>
-        </div>
+        <div className={styles.textWrapper}></div>
       </div>
     </NavLink>
   );
