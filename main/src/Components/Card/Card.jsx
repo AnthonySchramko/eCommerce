@@ -7,6 +7,7 @@ const Card = ({ id, name, img, price, desc }) => {
       <div className={styles.cardWrapper}>
         <h4>{name}</h4>
         <img className={styles.imageWrapper} src={img} />
+        <p>Price: ${price}</p>
         <div className={styles.textWrapper}></div>
       </div>
     </NavLink>

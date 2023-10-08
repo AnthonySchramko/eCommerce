@@ -1,18 +1,24 @@
-Nav {
+nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 10;
-  height: 10px;
+  height: 2vh;
   margin: 1vw;
+  width: 100%;
 }
 .text {
   text-decoration: none;
   font-size: 20px;
   &:hover {
-    color: red;
+    color: black;
   }
+}
+.icon {
+  height: 100px;
+  width: 100px;
+  justify-items: flex-start;
 }

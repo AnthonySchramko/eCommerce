@@ -3,7 +3,7 @@ import Card from "../Card/Card";
 import styles from "./Carousel.module.scss";
 
 const Carousel = ({ cards }) => {
-  const [index, setIndex] = useState([0, 1, 2, 3]);
+  const [index, setIndex] = useState([0, 1, 2]);
 
   const updateIndex = (step) => {
     const newIndex = index.map((item) => {
@@ -17,35 +17,39 @@ const Carousel = ({ cards }) => {
   };
 
   return (
-    <div className={styles.carousel}>
-      {cards.length > 3 && (
-        <img
-          src="../../../public/left-arrow.png"
-          onClick={() => updateIndex(-1)}
-          className={styles.button}
-        />
-      )}
-      {index.map((cardIndex) => {
-        return (
-          <Card
-            key={cards[cardIndex].id}
-            name={cards[cardIndex].name}
-            img={cards[cardIndex].img}
-            price={cards[cardIndex].price}
-            rarity={cards[cardIndex].rarity}
-            colours={cards[cardIndex].colours}
-            id={cards[cardIndex].id}
-            desc={cards[cardIndex].desc}
+    <div>
+      <div className={styles.carousel}>
+        {cards.length > 3 && (
+          <img
+            src="../../../public/left-arrow.png"
+            onClick={() => updateIndex(-1)}
+            className={styles.button}
           />
-        );
-      })}
-      {cards.length > 3 && (
-        <img
-          src="../../../public/right-arrow.png"
-          onClick={() => updateIndex(1)}
-          className={styles.button}
-        />
-      )}
+        )}
+        {index.map((cardIndex) => {
+          const card = cards[cardIndex];
+          const imgSrc = card.altImg ? card.altImg : card.img;
+          return (
+            <Card
+              key={card.id}
+              name={card.name}
+              img={imgSrc}
+              price={card.price}
+              rarity={card.rarity}
+              colours={card.colours}
+              id={card.id}
+              desc={card.desc}
+            />
+          );
+        })}
+        {cards.length > 3 && (
+          <img
+            src="../../../public/right-arrow.png"
+            onClick={() => updateIndex(1)}
+            className={styles.button}
+          />
+        )}
+      </div>
     </div>
   );
 };

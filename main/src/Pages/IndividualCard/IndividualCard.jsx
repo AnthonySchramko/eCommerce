@@ -1,14 +1,13 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { addToCart, getCardById } from "../../Services/cards";
-import Navbar from "../Navbar/Navbar";
-
+import styles from "./IndividualCard.module.scss";
 const IndividualCard = () => {
   const { id } = useParams();
   const [card, setCard] = useState(null);
   const navigate = useNavigate();
-
   const [cartCard, setCartCard] = useState({});
+
   useEffect(() => {
     async function fetchCard() {
       try {
@@ -16,9 +15,11 @@ const IndividualCard = () => {
         setCard(card);
 
         setCartCard({
+          id: card.name,
           name: card.name,
           price: card.price,
           img: card.img,
+          desc: card.desc,
         });
       } catch (error) {
         console.log(error);
@@ -29,32 +30,32 @@ const IndividualCard = () => {
   if (!card) {
     return <div>Loading...</div>;
   }
-  const handleChange = (e) => {
-    setCartCard({ ...cartCard, version: e.target.value });
-  };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await addToCart(cartCard);
+    const updatedCartCard = {
+      id: card.name,
+      ...cartCard,
+    };
+    await addToCart(updatedCartCard);
     navigate("/cart");
   };
   return (
-    <div>
-      <h1>{card.name}</h1>
-      <div>
-        <img src={card.img} alt={card.desc} />
+    <div className={styles.wrapper}>
+      <img className={styles.image} src={card.img} alt={card.desc} />
+      <div className={styles.descWrapper}>
         <div>
-          <p>Price: ${card.price}</p>
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="version">Print version</label>
-            {/* <select name="version" id="version" onChange={handleChange}>
-              {card &&
-                card.map((card) => {
-                  <option value={version}>{version}</option>;
-                })}
-            </select> */}
-            <button type="submit">Add to cart</button>
-          </form>
+          <h1>{card.name}</h1>
+          <h3>Card Description:</h3>
+          <p>{card.desc}</p>
         </div>
+      </div>
+      <div className={styles.cartWrapper}>
+        <form onSubmit={handleSubmit}>
+          <p>Price: ${card.price}</p>
+          <label htmlFor="version">Print version</label>
+
+          <button type="submit">Add to cart</button>
+        </form>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import {
   deleteDoc,
   doc,
   getDoc,
+  setDoc,
 } from "firebase/firestore";
 import { cards, cart } from "../config/firestore.js";
 export const getAllCards = async () => {
@@ -25,7 +26,14 @@ export const getCardById = async (id) => {
   }
 };
 export const addToCart = async (item) => {
-  const docRef = await addDoc(collection(cart, "cart"), item);
+  const docRef = doc(cart, "cart", item.id);
+  try {
+    await setDoc(docRef, item);
+    return { id: item.id, ...item };
+  } catch (error) {
+    console.error("Error adding item to cart:", error);
+    throw error;
+  }
 };
 export const deleteFromCart = async (id) => {
   await deleteDoc(doc(cart, "cart", id));

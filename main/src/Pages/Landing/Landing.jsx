@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Landing.module.scss";
-import ProductWrapper from "../../Components/ProductWrapper/ProductWrapper";
+import ProductWrapper from "../../Containers/ProductWrapper/ProductWrapper";
 import { getAllCards } from "../../Services/cards";
 import Carousel from "../../Components/Carousel/Carousel";
 const Landing = () => {
@@ -23,7 +23,6 @@ const Landing = () => {
         <h2>Featured Cards</h2>
         {cards && <Carousel cards={getFeatured(cards)} />}
       </div>
-
       <div className={styles.gallery}>
         <ProductWrapper />
       </div>

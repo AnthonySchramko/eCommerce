@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SearchBar from "../SearchBar/SearchBar";
+import SearchBar from "../../Components/SearchBar/SearchBar";
 import Products from "../../Containers/Products/Products";
 import styles from "./ProductWrapper.module.scss";
 const ProductWrapper = () => {
