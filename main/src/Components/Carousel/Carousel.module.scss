@@ -1,3 +1,4 @@
+@use "../../assets/partials/palette.scss";
 .button {
   width: 80px;
   height: 200px;
@@ -7,4 +8,6 @@
 .carousel {
   display: flex;
   text-align: center;
+  background-color: palette.$background-main;
+  border: none;
 }

@@ -4,8 +4,7 @@ import Card from "../../Components/Card/Card";
 import styles from "./CardContainer.module.scss";
 const CardContainer = ({ cards }) => {
   return (
-    <div>
-      <div></div>
+    <div className={styles.container}>
       {cards &&
         cards.map((card) => {
           return (

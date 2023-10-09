@@ -1,7 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 .body {
   margin-top: 5vh;
+  color: #333333;
 }

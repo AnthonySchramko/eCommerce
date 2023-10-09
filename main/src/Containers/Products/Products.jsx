@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CardContainer from "../CardContainer/CardContainer";
 import { getAllCards } from "../../Services/cards";
+import { generateCard } from "../../Services/import";
 
 const Products = ({ searchTerm, searched }) => {
   const [cards, setCards] = useState(null);
@@ -11,6 +12,7 @@ const Products = ({ searchTerm, searched }) => {
       try {
         const allCards = await getAllCards();
         setCards(allCards);
+        allCards.map(async (card) => generateCard(card));
         setLoading(false);
       } catch (error) {
         console.error("Error");

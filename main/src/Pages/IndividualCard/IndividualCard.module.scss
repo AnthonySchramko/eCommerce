@@ -1,14 +1,29 @@
-.image {
-  height: 320px;
-  width: 400px;
-}
+@use "../../assets/partials/palette.scss";
+
 .wrapper {
+  width: 96vw;
+  height: 100vh;
+  margin: 2vw;
+  background-color: palette.$background-main;
+  padding-right: 1vw;
+}
+.descWrapper {
+  margin: 0px 5vw;
+  text-align: start;
+  color: palette.$primary-text;
+}
+.card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50vh;
+}
+.cartWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 4vh 10em;
 }
-.descWrapper {
-  margin: 0px 2em;
-  text-align: start;
+.image {
+  height: 370px;
+  width: 265px;
 }

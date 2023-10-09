@@ -15,7 +15,7 @@ const Landing = () => {
   };
 
   return (
-    <div>
+    <div className={styles.body}>
       <div className={styles.wrapper}>
         <h1>
           Commanders Corner - Quick and cheap singles perfect for EDH decks

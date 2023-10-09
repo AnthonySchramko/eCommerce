@@ -1,7 +1,6 @@
 import {
   collection,
   getDocs,
-  addDoc,
   deleteDoc,
   doc,
   getDoc,
@@ -16,11 +15,12 @@ export const getAllCards = async () => {
     ...doc.data(),
   }));
 };
+//gets card by individual ID, also known as name. For individual card component
 export const getCardById = async (id) => {
   const docRef = doc(cards, "cards", id);
   const docSnap = await getDoc(docRef);
   if (docSnap.exists()) {
-    return { id: docSnap.ip, ...docSnap.data() };
+    return { id: docSnap.id, ...docSnap.data() };
   } else {
     throw new Error("Doc not found");
   }

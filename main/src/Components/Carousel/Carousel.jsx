@@ -19,9 +19,9 @@ const Carousel = ({ cards }) => {
   return (
     <div>
       <div className={styles.carousel}>
-        {cards.length > 3 && (
+        {cards.length > 2 && (
           <img
-            src="../../../public/left-arrow.png"
+            src="../../../left-arrow.png"
             onClick={() => updateIndex(-1)}
             className={styles.button}
           />
@@ -42,9 +42,9 @@ const Carousel = ({ cards }) => {
             />
           );
         })}
-        {cards.length > 3 && (
+        {cards.length > 2 && (
           <img
-            src="../../../public/right-arrow.png"
+            src="../../../right-arrow.png"
             onClick={() => updateIndex(1)}
             className={styles.button}
           />
