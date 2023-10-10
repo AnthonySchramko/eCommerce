@@ -17,7 +17,7 @@ const CartPage = () => {
       setTotalPrice(totalPrice.toFixed(2));
     };
     wrapper();
-  }, []);
+  }, [cart]);
   return (
     <div className={styles.container}>
       <div>
@@ -33,6 +33,7 @@ const CartPage = () => {
                 colours={card.colours}
                 id={card.id}
                 desc={card.desc}
+                selectedWear={card.selectedWear}
               />
             );
           })}

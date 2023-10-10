@@ -5,6 +5,7 @@ import {
   doc,
   getDoc,
   setDoc,
+  updateDoc,
 } from "firebase/firestore";
 import { cards, cart } from "../config/firestore.js";
 export const getAllCards = async () => {
@@ -23,6 +24,21 @@ export const getCardById = async (id) => {
     return { id: docSnap.id, ...docSnap.data() };
   } else {
     throw new Error("Doc not found");
+  }
+};
+export const editCardVariants = async (id, quantity, wearIndex) => {
+  try {
+    const card = await getCardById(id);
+    if (wearIndex >= 0 && wearIndex < card.wear.length) {
+      card.wear[wearIndex] -= quantity;
+      const docRef = doc(cards, "cards", id);
+      await updateDoc(docRef, { wear: card.wear });
+      return card;
+    } else {
+      throw new Error("Invalid wear index");
+    }
+  } catch (e) {
+    console.log(e);
   }
 };
 export const addToCart = async (item) => {

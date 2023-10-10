@@ -5,11 +5,14 @@
   justify-content: center;
   flex-direction: row;
   margin: 10px 4em;
+  background-color: palette.$background-main;
+  height: 98vh;
 }
 .checkout {
   align-self: flex-start;
   position: fixed;
   right: 5em;
   width: 10em;
-  background-color: palette.$background-main;
+  border: palette.$accent-secondary 3px solid;
+  box-shadow: palette.$accent-secondary 1px 1px 5px 1px;
 }
