@@ -1,0 +1,23 @@
+@use "../../assets/partials/palette.scss";
+.wrapper {
+  height: 50vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+}
+.gallery {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10vh;
+}
+.body {
+  background-color: palette.$background-main;
+  color: palette.$primary-text;
+  margin: 1em;
+  border: palette.$accent-main 2px solid;
+}

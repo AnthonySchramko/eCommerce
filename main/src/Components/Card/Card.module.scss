@@ -1,0 +1,29 @@
+@use "../../assets/partials/palette.scss";
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 270px;
+  text-decoration: none;
+  text-align: center;
+  color: palette.$primary-text;
+  padding: 2vh;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 10px 1px;
+  margin: 2vh;
+}
+.imageWrapper {
+  width: 265px;
+  height: 370px;
+}
+.textWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  color: palette.$primary-text;
+  text-wrap: wrap;
+  height: 4vh;
+  width: 4vw;
+  // box-shadow: inset palette.$accent-main 0px 0px 5px 1px;
+}

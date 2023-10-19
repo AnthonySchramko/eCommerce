@@ -1,0 +1,22 @@
+@use "../../assets/partials/palette.scss";
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 1em 0;
+  width: 80%;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 10px 1px;
+}
+.imageWrapper {
+  height: 370px;
+  width: 265px;
+}
+.textWrapper {
+  margin-left: 2em;
+  text-align: start;
+}
+.closeBar {
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-start;
+}

@@ -1,0 +1,32 @@
+@use "../../assets/partials/palette.scss";
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  right: 0;
+  height: 5vh;
+  width: 100%;
+  background-color: palette.$header;
+  box-shadow: #02101d 1px 1px 5px 5px;
+}
+.text {
+  text-decoration: none;
+  font-size: 20px;
+  color: palette.$accent-main;
+  &:hover {
+    color: palette.$accent-secondary;
+  }
+}
+.icon {
+  height: 50px;
+  top: 0;
+  left: 0;
+  width: 60px;
+  align-self: flex-start;
+}
+.textWrapper {
+  display: flex;
+  flex-direction: row;
+  padding-right: 2em;
+}
