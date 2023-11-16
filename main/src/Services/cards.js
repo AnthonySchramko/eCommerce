@@ -11,6 +11,7 @@ import { cards, cart } from "../config/firestore.js";
 export const getAllCards = async () => {
   const collectionRef = collection(cards, "cards");
   const querySnapshot = await getDocs(collectionRef);
+
   return querySnapshot.docs.map((doc) => ({
     id: doc.id,
     ...doc.data(),
