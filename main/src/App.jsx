@@ -4,9 +4,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Landing from "./Pages/Landing/Landing";
 import CartPage from "./Pages/CartPage/CartPage.jsx";
 import IndividualCard from "./Pages/IndividualCard/IndividualCard";
-import { generateCard } from "./Services/import.js";
 function App() {
-  console.log(generateCard());
   return (
     <BrowserRouter>
       <Navbar />
