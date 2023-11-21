@@ -2,10 +2,21 @@
 
 ## Demo & Snippets
 
-- Include hosted link
-- Include images of app if CLI or Client App
+### Landing:
 
----
+![Alt text](image.png)
+
+### Home/Card list:
+
+![Alt text](image-1.png)
+
+### Individual Cards:
+
+![Alt text](image-2.png)
+
+### Cart:
+
+## ![Alt text](image-3.png)
 
 ## Requirements / Purpose
 
@@ -87,7 +98,7 @@ I chose this product as it is a hobby of mine, and works well given the MVP's.
 
 ## Known issues
 
-- Too many items in cart makes cart display weird
+- Too many items in cart makes cart display weird - FIXED
 
 - Removing items from cart will not revert changes made to stock values
 
@@ -101,11 +112,20 @@ I chose this product as it is a hobby of mine, and works well given the MVP's.
 
 ## Change logs
 
-### 16/11/2023 -
+### 16/11/2023 - Firebase fixes
 
 - Extended Firestore user authentication length
 - Added users to cohort response payload
 - Centralized API base URL on frontend using the proxy `package.json` property
+
+### 21/11/2023 - Design changes
+
+- Removed box shadow around the body
+- Removed box around the Checkout
+- Fixed checkout display issues when too many cards
+  - This was for height of page, changed to 100%
+- Also fixed the 'x' box being out of position, due to text length
+  - Changed text width to 100%
 
 ---
 

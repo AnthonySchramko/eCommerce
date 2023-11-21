@@ -2,10 +2,9 @@
 
 .wrapper {
   width: 96vw;
-  height: 100vh;
+  height: 90vh;
   margin: 2vw;
   background-color: palette.$background-main;
-  padding-right: 1vw;
 }
 .descWrapper {
   margin: 0px 5vw;
@@ -14,6 +13,7 @@
 }
 .card {
   display: flex;
+  padding: 1em;
   justify-content: flex-start;
   align-items: center;
   height: 50vh;

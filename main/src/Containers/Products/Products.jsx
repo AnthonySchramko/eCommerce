@@ -10,7 +10,6 @@ const Products = ({ searchTerm, searched }) => {
   useEffect(() => {
     const wrapper = async () => {
       try {
-        console.log("hello " + getAllCards());
         const allCards = await getAllCards();
         setCards(allCards);
         allCards.map(async (card) => generateCard(card));

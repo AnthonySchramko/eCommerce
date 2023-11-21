@@ -5,7 +5,8 @@
   flex-direction: row;
   margin: 1em 0;
   width: 80%;
-  box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 10px 1px;
+  padding-bottom: 1em;
+  border-bottom: 1px solid black;
 }
 .imageWrapper {
   height: 370px;
@@ -14,6 +15,7 @@
 .textWrapper {
   margin-left: 2em;
   text-align: start;
+  width: 100%;
 }
 .closeBar {
   display: flex;
